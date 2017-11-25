@@ -11,9 +11,8 @@ if !r.exists(:compl)
         n.strip!
         (1..(n.length)).each{|l|
             prefix = n[0...l]
-            r.zadd(:compl,0,prefix+"$")
+            #r.zadd(:compl,0,prefix+"$")
         }
-        puts "Adding Records"
         r.zadd(:compl,0,n+"$")
     }
 else
